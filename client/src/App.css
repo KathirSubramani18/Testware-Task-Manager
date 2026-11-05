@@ -100,6 +100,26 @@ h1 {
   overflow-wrap: anywhere;
 }
 
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.done-btn {
+  background-color: #22a06b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 13px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.done-btn:hover {
+  background-color: #168052;
+}
+
 .completed {
   text-decoration: line-through;
   color: #8397b5;
