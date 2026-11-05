@@ -100,19 +100,23 @@ function App() {
         <div className="task-list">
           {tasks.map(task => (
             <div className="task-item" key={task.id}>
-              <span
-                className={task.done ? "completed" : ""}
-                onClick={() => toggleTask(task)}
-                title="Click to change task status"
-              >
-                {task.title}
-              </span>
-
-              <button
-                className="delete-btn" onClick={() => deleteTask(task.id)}
-              >
-                Delete
-              </button>
+                <span className={task.done ? "completed" : ""}>
+                    {task.title}
+                </span>
+                <div className="task-actions">
+                    <button
+                        className="done-btn"
+                        onClick={() => toggleTask(task)}
+                    >
+                        {task.done ? "Undo" : "Done"}
+                    </button>
+                    <button
+                        className="delete-btn"
+                        onClick={() => deleteTask(task.id)}
+                    >
+                        Delete
+                    </button>
+                </div>
             </div>
           ))}
         </div>
