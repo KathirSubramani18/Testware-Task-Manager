@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #edf5ff;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.todo-container {
+  width: 72%;
+  max-width: 850px;
+  min-height: 280px;
+  background-color: #ffffff;
+  border-radius: 13px;
+  padding: 17px 28px 26px;
+}
+
+h1 {
+  text-align: center;
+  color: #2864f0;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.task-stats {
+  color: #63758f;
+  font-size: 13px;
+  line-height: 27px;
+  margin-bottom: 7px;
+}
+
+.task-form {
+  display: flex;
+  gap: 11px;
+  margin-bottom: 15px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  padding: 8px 13px;
+  border: 1px solid #c6d8ff;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.task-form input:focus {
+  border-color: #2864f0;
+}
+
+.add-btn {
+  width: 69px;
+  height: 34px;
+  background-color: #2864ed;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-item {
+  min-height: 45px;
+  background-color: #dceafe;
+  border: 1px solid #c1d9ff;
+  border-radius: 6px;
+  padding: 8px 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #18376e;
+  font-size: 14px;
+}
+
+.task-item span {
+  cursor: pointer;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #8397b5;
+}
+
+.delete-btn {
+  background-color: #f26363;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 13px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #164dc7;
+}
+
+.delete-btn:hover {
+  background-color: #dc4545;
+}
+
+.empty {
+  color: #718096;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.error {
+  color: #dc2626;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .todo-container {
+    width: 94%;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .task-item {
+    font-size: 13px;
+  }
+}
